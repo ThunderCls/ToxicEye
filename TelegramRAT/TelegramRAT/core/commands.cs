@@ -436,10 +436,10 @@ namespace TelegramRAT
                             break;
                         }
                         // Remove .exe if exists
-                        if (processName.EndsWith(".exe"))
-                        {
-                            processName = processName.Substring(0, processName.Length - 4);
-                        }
+                        //if (processName.EndsWith(".exe"))
+                        //{
+                        //    processName = processName.Substring(0, processName.Length - 4);
+                        //}
                         // Start
                         try
                         {
